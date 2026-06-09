@@ -9,12 +9,17 @@ export const projects = [
     longDescription:
       "AI Persona is a deployable assistant system built around structured knowledge, retrieval, grounding, and controlled response behavior. In the portfolio it is treated as a standalone project, while the separate Chat with me page will later use its backend through a custom portfolio interface.",
     tags: ["RAG", "Vector Search", "Cloudflare", "Gemini", "D1", "API Design"],
-    previewTitle: "Retrieval-backed assistant system",
-    previewMeta: "Backend, evidence search, grounded responses",
+    previewTitle: "Grounded assistant backend",
+    previewMeta: "Retrieval, evidence search, grounded responses",
+    previewZoom: 0.42,
+    previewX: 0,
+    previewY: -48,
     links: {
       caseStudy: "/projects/ai-persona",
       github: "https://github.com/nexxucc",
-      live: "https://ai-persona.vanshjain05.workers.dev/",
+      live: "https://ai-persona.vanshjain05.workers.dev",
+      previewUrl: null,
+      previewImage: "/previews/ai-persona.png",
     },
     sections: [
       {
@@ -27,7 +32,7 @@ export const projects = [
       },
       {
         title: "Current portfolio role",
-        body: "AI Persona remains listed as a project. The live Chat with me page is intentionally separate and will call this backend in a later iteration using a custom UI matching the portfolio.",
+        body: "AI Persona remains listed as a standalone project. The live Chat with me page is intentionally separate and will call this backend later through a custom UI matching the portfolio.",
       },
     ],
   },
@@ -49,11 +54,13 @@ export const projects = [
       "Feature Engineering",
     ],
     previewTitle: "Signal and backtest preview",
-    previewMeta: "Charts/results will be added in iteration 2",
+    previewMeta: "Framework, features, signals, and result visuals",
     links: {
       caseStudy: "/projects/chandraquant-siddhanta",
       github: "https://github.com/nexxucc/ChandraQuant-Siddhanta",
       results: "#",
+      previewUrl: null,
+      previewImage: null,
     },
     sections: [
       {
@@ -65,8 +72,8 @@ export const projects = [
         body: "A Python ML pipeline that combines 31 technical features with 10 lunar-solar cycle features to predict 5-day bullish regimes for major Indian indices.",
       },
       {
-        title: "Results direction",
-        body: "The portfolio should eventually show an equity curve, signal plot, feature pipeline, and backtest metrics instead of a fake live demo.",
+        title: "Portfolio role",
+        body: "This project is presented as a framework and case study rather than a live app, with emphasis on feature engineering, signal generation, and backtest interpretation.",
       },
     ],
   },
@@ -74,11 +81,11 @@ export const projects = [
     slug: "research-assistant",
     title: "Context-Aware Research Assistant",
     type: "RAG / Document Intelligence",
-    status: "Deploy after edits",
+    status: "Deployed system",
     description:
       "A document-aware research assistant that indexes uploaded content, retrieves relevant context, and generates grounded answers for faster research workflows.",
     longDescription:
-      "The Research Assistant demonstrates document ingestion, chunking, semantic search, and answer generation around research documents. The final portfolio will include its deployed link once edits are complete.",
+      "The Research Assistant demonstrates document ingestion, chunking, semantic search, and answer generation around research documents through a deployed Streamlit interface.",
     tags: [
       "Python",
       "LangChain",
@@ -88,11 +95,16 @@ export const projects = [
       "Embeddings",
     ],
     previewTitle: "Document Q&A interface",
-    previewMeta: "Live preview/screenshot planned for iteration 2",
+    previewMeta: "Live document Q&A interface",
+    previewZoom: 0.62,
+    previewX: 0,
+    previewY: 0,
     links: {
       caseStudy: "/projects/research-assistant",
       github: "https://github.com/nexxucc/NLP-Research-Assistant",
-      live: "#",
+      live: "https://nexxucc-nlp-research-assistant-srcuistreamlit-app-762r3i.streamlit.app",
+      previewUrl: null,
+      previewImage: "/previews/research-assistant.png",
     },
     sections: [
       {
@@ -104,8 +116,8 @@ export const projects = [
         body: "A RAG pipeline using LLMs to ingest, retrieve, and summarize research papers with FAISS-based semantic search across 500+ indexed documents.",
       },
       {
-        title: "Iteration 2 plan",
-        body: "After deployment, this page should include a real product screenshot or embedded preview showing document upload, retrieved sources, and grounded answers.",
+        title: "Current deployment",
+        body: "The deployed Streamlit interface provides a live document Q&A experience that can be opened directly from the portfolio and previewed inside the project card.",
       },
     ],
   },
@@ -113,18 +125,23 @@ export const projects = [
     slug: "ai-shopify-creator",
     title: "AI Shopify Creator",
     type: "AI Product Builder",
-    status: "Deploy after edits",
+    status: "Deployed system",
     description:
       "An AI-powered store creation tool that generates Shopify storefront content, product sections, and brand-ready layouts from user prompts.",
     longDescription:
-      "AI Shopify Creator is a product-style AI workflow that turns store ideas into generated Shopify store content through orchestrated agents and a full-stack dashboard. The final portfolio will include its deployed link once edits are complete.",
+      "AI Shopify Creator is a product-style AI workflow that turns store ideas into generated Shopify store content through orchestrated agents, a full-stack dashboard, n8n automation, and Shopify Admin API integration.",
     tags: ["React", "Express.js", "n8n", "LLM Agents", "PostgreSQL", "Docker"],
     previewTitle: "Prompt-to-store workflow",
-    previewMeta: "Generated storefront preview planned for iteration 2",
+    previewMeta: "Live prompt-to-store workflow dashboard",
+    previewZoom: 0.5,
+    previewX: 0,
+    previewY: 0,
     links: {
       caseStudy: "/projects/ai-shopify-creator",
       github: "https://github.com/nexxucc/ai-shopify-creator",
-      live: "#",
+      live: "https://ai-shopify-creator-production.up.railway.app",
+      previewUrl: null,
+      previewImage: "/previews/ai-shopify-creator.png",
     },
     sections: [
       {
@@ -136,8 +153,8 @@ export const projects = [
         body: "A React and Express dashboard backed by self-hosted n8n workflows and multiple LLM agents to generate complete Shopify store content and structure.",
       },
       {
-        title: "Iteration 2 plan",
-        body: "After deployment, this project card should use a generated storefront preview and final live demo link.",
+        title: "Current deployment",
+        body: "The deployed dashboard connects to a Railway-hosted backend, Postgres, n8n workflows, and Shopify Admin API to run the prompt-to-store generation flow.",
       },
     ],
   },

@@ -1,14 +1,34 @@
-import { SectionHeader } from '../components/SectionHeader';
-import { ExperienceCard } from '../components/ExperienceCard';
-import { ProjectCard } from '../components/ProjectCard';
-import { AchievementCard } from '../components/AchievementCard';
-import { SkillCategory } from '../components/SkillCategory';
-import { experiences } from '../data/experience';
-import { projects } from '../data/projects';
-import { achievements } from '../data/achievements';
-import { skills } from '../data/skills';
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+import { SectionHeader } from "../components/SectionHeader";
+import { ExperienceCard } from "../components/ExperienceCard";
+import { ProjectCard } from "../components/ProjectCard";
+import { AchievementCard } from "../components/AchievementCard";
+import { SkillCategory } from "../components/SkillCategory";
+import { experiences } from "../data/experience";
+import { projects } from "../data/projects";
+import { achievements } from "../data/achievements";
+import { skills } from "../data/skills";
 
 export function Work() {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (!location.hash) return;
+
+    const scrollToHash = () => {
+      const target = document.querySelector(location.hash);
+      if (!target) return;
+
+      target.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    };
+
+    requestAnimationFrame(scrollToHash);
+  }, [location.hash]);
+
   return (
     <section className="section page-shell" id="work">
       <div className="container">
@@ -18,7 +38,10 @@ export function Work() {
 
             <div className="bento-card bento-full experience-timeline stagger-children">
               {experiences.map((experience) => (
-                <ExperienceCard experience={experience} key={`${experience.company}-${experience.role}`} />
+                <ExperienceCard
+                  experience={experience}
+                  key={`${experience.company}-${experience.role}`}
+                />
               ))}
             </div>
           </section>
@@ -38,7 +61,10 @@ export function Work() {
 
             <div className="achievements-grid stagger-children">
               {achievements.map((achievement) => (
-                <AchievementCard achievement={achievement} key={achievement.title} />
+                <AchievementCard
+                  achievement={achievement}
+                  key={achievement.title}
+                />
               ))}
             </div>
           </section>

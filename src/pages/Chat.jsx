@@ -1,26 +1,26 @@
-import { useState } from 'react';
-import { SectionHeader } from '../components/SectionHeader';
-import { Icon } from '../utils/icons';
+import { useState } from "react";
+import { SectionHeader } from "../components/SectionHeader";
+import { Icon } from "../utils/icons";
 
 const suggestedPrompts = [
-  'What projects has Vansh built?',
-  'Which project best shows RAG experience?',
+  "What projects has Vansh built?",
+  "Which project best shows RAG experience?",
   "Summarize Vansh's AI engineering experience.",
-  'What is ChandraQuant Siddhanta?',
-  'What has Vansh done at Fluno?',
+  "What is ChandraQuant Siddhanta?",
+  "What has Vansh done at Fluno?",
 ];
 
 const initialMessages = [
   {
-    role: 'assistant',
+    role: "assistant",
     content:
       "Hi, I can answer questions about Vansh's projects, experience, skills, and technical work. Backend integration is planned for iteration 3; this is the matching frontend shell for now.",
   },
 ];
 
-export function Chat() {
+export function ChatInterface() {
   const [messages, setMessages] = useState(initialMessages);
-  const [input, setInput] = useState('');
+  const [input, setInput] = useState("");
 
   function sendMessage(message = input) {
     const trimmed = message.trim();
@@ -28,15 +28,15 @@ export function Chat() {
 
     setMessages((currentMessages) => [
       ...currentMessages,
-      { role: 'user', content: trimmed },
+      { role: "user", content: trimmed },
       {
-        role: 'assistant',
+        role: "assistant",
         content:
-          'This is the iteration-1 chat UI placeholder. In iteration 3, this message will come from the AI Persona backend while keeping this same portfolio-styled interface.',
+          "This is the iteration-1 chat UI placeholder. In iteration 3, this message will come from the AI Persona backend while keeping this same portfolio-styled interface.",
       },
     ]);
 
-    setInput('');
+    setInput("");
   }
 
   return (
@@ -54,15 +54,19 @@ export function Chat() {
 
             <div className="suggested-prompts">
               {suggestedPrompts.map((prompt) => (
-                <button key={prompt} type="button" onClick={() => sendMessage(prompt)}>
+                <button
+                  key={prompt}
+                  type="button"
+                  onClick={() => sendMessage(prompt)}
+                >
                   {prompt}
                 </button>
               ))}
             </div>
 
             <p className="chat-note">
-              Backend connection is deferred to iteration 3. The interface already follows the portfolio card system and
-              theme variables.
+              Backend connection is deferred to iteration 3. The interface
+              already follows the portfolio card system and theme variables.
             </p>
           </aside>
 
@@ -76,7 +80,10 @@ export function Chat() {
 
             <div className="chat-messages">
               {messages.map((message, index) => (
-                <div className={`chat-message ${message.role}`} key={`${message.role}-${index}`}>
+                <div
+                  className={`chat-message ${message.role}`}
+                  key={`${message.role}-${index}`}
+                >
                   <p>{message.content}</p>
                 </div>
               ))}
@@ -100,6 +107,18 @@ export function Chat() {
               </button>
             </form>
           </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export function Chat() {
+  return (
+    <section className="section page-shell chat-page" id="chat">
+      <div className="container">
+        <div className="coming-soon-only fade-up">
+          <h1>Coming Soon!</h1>
         </div>
       </div>
     </section>
