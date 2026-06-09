@@ -1,3 +1,6 @@
+const previewPath = (fileName) =>
+  `${import.meta.env.BASE_URL}previews/${fileName}`;
+
 export const projects = [
   {
     slug: "ai-persona",
@@ -19,7 +22,7 @@ export const projects = [
       github: "https://github.com/nexxucc",
       live: "https://ai-persona.vanshjain05.workers.dev",
       previewUrl: null,
-      previewImage: "/previews/ai-persona.png",
+      previewImage: previewPath("ai-persona.png"),
     },
     sections: [
       {
@@ -104,7 +107,7 @@ export const projects = [
       github: "https://github.com/nexxucc/NLP-Research-Assistant",
       live: "https://nexxucc-nlp-research-assistant-srcuistreamlit-app-762r3i.streamlit.app",
       previewUrl: null,
-      previewImage: "/previews/research-assistant.png",
+      previewImage: previewPath("research-assistant.png"),
     },
     sections: [
       {
@@ -141,7 +144,7 @@ export const projects = [
       github: "https://github.com/nexxucc/ai-shopify-creator",
       live: "https://ai-shopify-creator-production.up.railway.app",
       previewUrl: null,
-      previewImage: "/previews/ai-shopify-creator.png",
+      previewImage: previewPath("ai-shopify-creator.png"),
     },
     sections: [
       {
